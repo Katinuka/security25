@@ -1,0 +1,78 @@
+### GET ALL MOVIES
+GET http://localhost:8080/api/v1/movies
+
+
+### GET A MOVIE
+GET http://localhost:8080/api/v1/movies/67d9633ecd9e6a2426222b02
+### GET ANOTHER MOVIE
+GET http://localhost:8080/api/v1/movies/67d968c0d2329545ba3ade18
+
+
+### DELETE A MOVIE
+DELETE http://localhost:8080/api/v1/movies/67d9633ecd9e6a2426222b02
+### DELETE ANOTHER MOVIE
+DELETE http://localhost:8080/api/v1/movies/67d968c0d2329545ba3ade18
+
+
+### CREATE A MOVIE
+POST http://localhost:8080/api/v1/movies
+Content-Type: application/json
+
+{
+  "id": "67d9633ecd9e6a2426222b02",
+  "name": "name1",
+  "genre": "genre1",
+  "date": "2021-01-13",
+  "rating": 7.12,
+  "cast": "actor1, actor2, actor3",
+  "minAge": 12,
+  "description": "description1"
+}
+
+
+### CREATE ANOTHER MOVIE
+POST http://localhost:8080/api/v1/movies
+Content-Type: application/json
+
+{
+  "id": "67d968c0d2329545ba3ade18",
+  "name": "name2",
+  "genre": "genre2",
+  "date": "2023-12-22",
+  "rating": 5.97,
+  "cast": "actor2, actor3, actor4",
+  "minAge": 16,
+  "description": "description2"
+}
+
+
+### UPDATE ONE MOVIE (changes the name and minAge)
+PUT http://localhost:8080/api/v1/movies
+Content-Type: application/json
+
+{
+  "id": "67d9633ecd9e6a2426222b02",
+  "name": "new name1",
+  "genre": "genre1",
+  "date": "2021-01-13",
+  "rating": 7.12,
+  "cast": "actor1, actor2, actor3",
+  "minAge": 13,
+  "description": "description1"
+}
+
+
+### UPDATE ANOTHER MOVIE (changes the rating and description)
+PUT http://localhost:8080/api/v1/movies
+Content-Type: application/json
+
+{
+  "id": "67d968c0d2329545ba3ade18",
+  "name": "name2",
+  "genre": "genre2",
+  "date": "2023-12-22",
+  "rating": 9.37,
+  "cast": "actor2, actor3, actor4",
+  "minAge": 16,
+  "description": "new description2"
+}
